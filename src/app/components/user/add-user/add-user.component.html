@@ -1,0 +1,43 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>Add User</mat-card-title>
+  </mat-card-header>
+
+  <mat-card-content>
+    <form class="container" autocomplete="off" [formGroup]="addUserForm" (ngSubmit)="onAddUser(addUserForm.value)">
+      <mat-form-field>
+        <input matInput placeholder="Name" formControlName="name">
+      </mat-form-field>
+      <mat-error>
+        <span class="warning" *ngIf="addUserForm.get('name').touched && addUserForm.get('name').invalid">Please enter your name</span>
+      </mat-error>
+      <br>
+      <mat-form-field>
+        <input matInput placeholder="Surname" formControlName="surname">
+      </mat-form-field>
+      <mat-error>
+        <span class="warning" *ngIf="addUserForm.get('surname').touched && addUserForm.get('surname').invalid">Please enter your surname</span>
+      </mat-error>
+      <br>
+      <mat-form-field>
+        <input type="number" matInput placeholder="Age" formControlName="age">
+      </mat-form-field>
+      <mat-error>
+        <span class="warning" *ngIf="addUserForm.get('age').touched && addUserForm.get('age').invalid">Please enter your age</span>
+      </mat-error>
+      <br>
+      <mat-form-field>
+        <mat-select placeholder="Sex" disableRipple formControlName="sex">
+          <mat-option value="1">Male</mat-option>
+          <mat-option value="2">Female</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-error>
+        <span class="warning" *ngIf="addUserForm.get('sex').touched && addUserForm.get('sex').invalid">Please select your sex</span>
+      </mat-error>
+      <br>
+      <button mat-raised-button color="primary" [disabled]="addUserForm.invalid" type="button" (click)="onAddUser(addUserForm.value)">Submit</button>
+    </form>
+  </mat-card-content>
+
+</mat-card>

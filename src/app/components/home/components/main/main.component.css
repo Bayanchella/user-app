@@ -1,0 +1,25 @@
+main {
+  background-color: white;
+}
+.title {
+  width: 55%;
+  margin: 0 auto;
+  padding-top: 120px;
+  text-align: center;
+}
+
+.title-text {
+  font-size: 30px;
+  color: black;
+}
+
+.title-button {
+  background-color: #ed433e;
+  font-size: 24px;
+  color: white;
+  border: 5px solid rgba(255, 255, 255, 1);
+  padding: 7px 7px;
+  border-radius: 25px;
+}
+
+

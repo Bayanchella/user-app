@@ -1,0 +1,8 @@
+<mat-toolbar class="header" color="primary">
+  <button mat-button [matMenuTriggerFor]="menu">User menu</button>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item (click)="nav($event)">Add</button>
+    <button mat-menu-item (click)="nav($event)">All Users</button>
+  </mat-menu>
+  <button mat-button (click)="nav($event)">Home Page</button>
+</mat-toolbar>

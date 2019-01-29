@@ -1,0 +1,17 @@
+<div class="container">
+  <mat-accordion multi="true" *ngIf="users.length !== 0">
+    <mat-expansion-panel *ngFor="let user of users; let i = index">
+      <mat-expansion-panel-header>
+        <h4>{{ i + 1 }}. {{ user.name }} {{ user.surname }}</h4>
+      </mat-expansion-panel-header>
+        <p>Age: {{ user.age }}</p>
+        <p>Sex: {{ user.sex }}</p>
+      <mat-action-row>
+        <button mat-raised-button color="primary" (click)="editUser(i)">Edit</button>
+        <button mat-raised-button (click)="deleteUser(i)">Delete</button>
+      </mat-action-row>
+    </mat-expansion-panel>
+  </mat-accordion>
+
+  <p class="info-text mat-body-1" *ngIf="users.length === 0">No Users Added Yet</p>
+</div>

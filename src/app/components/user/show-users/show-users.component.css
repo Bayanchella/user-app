@@ -1,0 +1,12 @@
+.container {
+  width: 60%;
+  margin: 2rem auto;
+}
+
+mat-expansion-panel {
+  margin: 10px 0;
+}
+
+button {
+  margin: auto 10px;
+}

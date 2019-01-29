@@ -1,0 +1,17 @@
+.container {
+  text-align: center;
+}
+
+mat-form-field {
+  width: 300px;
+}
+
+mat-card {
+  width: 60%;
+  margin: 2rem auto;
+}
+
+.warning {
+  color: #ba4100;
+  font-size: 14px;
+}
